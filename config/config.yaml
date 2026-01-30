@@ -32,29 +32,98 @@ app:
 platforms:
   enabled: true                         # 是否启用热榜平台抓取
   sources:
-    - id: "toutiao"
-      name: "今日头条"
-    - id: "baidu"
-      name: "百度热搜"
-    - id: "wallstreetcn-hot"
-      name: "华尔街见闻"
-    - id: "thepaper"
-      name: "澎湃新闻"
-    - id: "bilibili-hot-search"
-      name: "bilibili 热搜"
-    - id: "cls-hot"
-      name: "财联社热门"
-    - id: "ifeng"
-      name: "凤凰网"
-    - id: "tieba"
-      name: "贴吧"
-    - id: "weibo"
-      name: "微博"
-    - id: "douyin"
-      name: "抖音"
-    - id: "zhihu"
-      name: "知乎"
+# === 综合新闻媒体类 ===
+  - id: "toutiao"
+    name: "今日头条"
+  - id: "baidu"
+    name: "百度热搜"
+  - id: "thepaper"
+    name: "澎湃新闻"
+  - id: "ifeng"
+    name: "凤凰网"
+  - id: "cankaoxiaoxi"
+    name: "参考消息"
+  - id: "sputniknewscn"
+    name: "卫星通讯社"
+  - id: "zaobao"
+    name: "联合早报"
+  - id: "mktnews"
+    name: "MKT新闻"
+  - id: "kaopu"
+    name: "靠谱新闻"
 
+  # === 财经投资类 ===
+  - id: "wallstreetcn-hot"
+    name: "华尔街见闻 最热"
+  - id: "wallstreetcn-quick"
+    name: "华尔街见闻 快讯"
+  - id: "wallstreetcn-news"
+    name: "华尔街见闻 最新"
+  - id: "cls-hot"
+    name: "财联社热门"
+  - id: "gelonghui"
+    name: "格隆汇"
+  - id: "xueqiu"
+    name: "雪球"
+  - id: "jin10"
+    name: "金十数据"
+  - id: "fastbull"
+    name: "快讯通"
+
+  # === 社交/短视频/娱乐类 ===
+  - id: "weibo"
+    name: "微博"
+  - id: "douyin"
+    name: "抖音"
+  - id: "bilibili-hot-search"
+    name: "bilibili 热搜"
+  - id: "tieba"
+    name: "贴吧"
+  - id: "zhihu"
+    name: "知乎"
+  - id: "hupu"
+    name: "虎扑"
+
+  # === 科技类平台 ===
+  - id: "ithome"
+    name: "IT之家"
+  - id: "juejin"
+    name: "掘金"
+  - id: "github"
+    name: "GitHub"
+  - id: "hackernews"
+    name: "Hacker News"
+  - id: "solidot"
+    name: "Solidot"
+  - id: "v2ex"
+    name: "V2EX"
+  - id: "nowcoder"
+    name: "牛客网"
+  - id: "pcbeta"
+    name: "远景论坛"
+  - id: "sspai"
+    name: "少数派"
+  - id: "producthunt"
+    name: "ProductHunt"
+
+  # === 其他/工具类 ===
+  - id: "chongbuluo"
+    name: "虫部落"
+
+  - id: "tencent-hot"
+    name: "腾讯新闻 综合早报"
+    
+  - id: "cls-telegraph"
+    name: "财联社 电报"
+    
+  - id: "cls-depth"
+    name: "财联社 深度"
+    
+  - id: "fastbull-express"
+    name: "法布财经 快讯"
+    
+  - id: "fastbull-news"
+    name: "法布财经 头条"
 
 
 # ===============================================================
@@ -105,6 +174,687 @@ rss:
       url: "https://finance.yahoo.com/news/rssindex"
       enabled: false                  # 禁用
 
+    # 北美媒体
+    - id: "nytimes-home"
+      name: "纽约时报首页"
+      url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+  
+    - id: "cnn-world"
+      name: "CNN国际新闻"
+      url: "http://rss.cnn.com/rss/edition_world.rss"
+  
+    - id: "cnn-top"
+      name: "CNN头条新闻"
+      url: "http://rss.cnn.com/rss/edition.rss"
+  
+    - id: "cnn-business"
+      name: "CNN商业新闻"
+      url: "http://rss.cnn.com/rss/edition_business.rss"
+  
+    - id: "cnn-tech"
+      name: "CNN科技新闻"
+      url: "http://rss.cnn.com/rss/edition_technology.rss"
+  
+    - id: "npr-news"
+      name: "NPR新闻"
+      url: "https://feeds.npr.org/1001/rss.xml"
+  
+    - id: "wsj-markets"
+      name: "华尔街日报市场新闻"
+      url: "https://feeds.a.dj.com/rss/RSSMarketsMain.xml"
+
+    # 英国媒体
+    - id: "bbc-world"
+      name: "BBC国际新闻"
+      url: "http://feeds.bbci.co.uk/news/world/rss.xml"
+  
+    - id: "bbc-top"
+      name: "BBC头条新闻"
+      url: "http://feeds.bbci.co.uk/news/rss.xml"
+  
+    - id: "bbc-europe"
+      name: "BBC欧洲新闻"
+      url: "http://feeds.bbci.co.uk/news/world/europe/rss.xml"
+  
+    - id: "bbc-middleeast"
+      name: "BBC中东新闻"
+      url: "http://feeds.bbci.co.uk/news/world/middle_east/rss.xml"
+  
+    - id: "bbc-africa"
+      name: "BBC非洲新闻"
+      url: "http://feeds.bbci.co.uk/news/world/africa/rss.xml"
+  
+    - id: "bbc-business"
+      name: "BBC商业新闻"
+      url: "http://feeds.bbci.co.uk/news/business/rss.xml"
+  
+    - id: "bbc-tech"
+      name: "BBC科技新闻"
+      url: "http://feeds.bbci.co.uk/news/technology/rss.xml"
+  
+    - id: "bbc-sport"
+      name: "BBC体育新闻"
+      url: "https://feeds.bbci.co.uk/sport/rss.xml"
+
+    - id: "bbc-health"
+      name: "BBC健康新闻"
+      url: "http://feeds.bbci.co.uk/news/health/rss.xml"
+  
+    - id: "bbc-science"
+      name: "BBC科学新闻"
+      url: "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml"
+  
+    - id: "guardian-world"
+      name: "卫报国际新闻"
+      url: "https://www.theguardian.com/world/rss"
+  
+    - id: "guardian-tech"
+      name: "卫报科技新闻"
+      url: "https://www.theguardian.com/uk/technology/rss"
+  
+    - id: "guardian-business"
+      name: "卫报商业新闻"
+      url: "https://www.theguardian.com/uk/business/rss"
+  
+    - id: "guardian-science"
+      name: "卫报科学新闻"
+      url: "https://www.theguardian.com/science/rss"
+
+    # 欧洲大陆媒体
+    - id: "dw-english"
+      name: "德国之声英语新闻"
+      url: "https://rss.dw.com/rdf/rss-en-all"
+  
+    - id: "france24-english"
+      name: "法国24英语新闻"
+      url: "https://www.france24.com/en/rss"
+
+    # 亚洲媒体
+    - id: "xinhua-world"
+      name: "新华社国际新闻"
+      url: "http://www.xinhuanet.com/english/rss/worldrss.xml"
+
+    - id: "abc-australia"
+      name: "ABC澳大利亚新闻"
+      url: "https://www.abc.net.au/news/feed/51120/rss.xml"
+
+    # 中东媒体
+    - id: "aljazeera-english"
+      name: "半岛电视台英语新闻"
+      url: "https://www.aljazeera.com/xml/rss/all.xml"
+
+    # 科技媒体
+    - id: "techcrunch"
+      name: "TechCrunch"
+      url: "https://techcrunch.com/feed/"
+
+    - id: "theverge"
+      name: "The Verge"
+      url: "https://www.theverge.com/rss/index.xml"
+  
+    - id: "arstechnica"
+      name: "Ars Technica"
+      url: "http://feeds.arstechnica.com/arstechnica/index"
+
+    # 中文科技博客（补充）
+  
+    - id: "coolshell"
+      name: "酷壳 - CoolShell"
+      url: "https://coolshell.cn/feed"
+  
+    - id: "techug"
+      name: "程序师"
+      url: "https://www.techug.com/feed"
+  
+    - id: "infoq-cn"
+      name: "InfoQ中文站"
+      url: "https://www.infoq.cn/feed"
+  
+    - id: "solidot"
+      name: "Solidot"
+      url: "https://www.solidot.org/index.rss"
+
+    - id: "the-decision-lab"
+      name: "The Decision Lab"
+      url: "https://thedecisionlab.com/feed/"
+      
+    - id: "ness-labs"
+      name: "Ness Labs"
+      url: "https://nesslabs.com/feed"
+      
+    - id: "farnam-street"
+      name: "Farnam Street"
+      url: "https://fs.blog/feed/"
+      
+    - id: "the-sunday-wisdom"
+      name: "The Sunday Wisdom"
+      url: "https://coffeeandjunk.substack.com/feed"
+      
+    - id: "commonplace-commoncog-blog"
+      name: "Commonplace - The Commoncog Blog"
+      url: "https://commoncog.com/blog/rss/"
+      
+    - id: "scott-h-young"
+      name: "Scott H Young"
+      url: "https://feeds.feedburner.com/scotthyoung/HAHx"
+      
+    - id: "big-think"
+      name: "Big Think"
+      url: "https://feeds.feedburner.com/bigthink/main"
+      
+    - id: "steve-blank"
+      name: "Steve Blank"
+      url: "http://steveblank.com/feed/"
+      
+    - id: "the-singularity-is-nearer"
+      name: "The singularity is nearer"
+      url: "https://geohot.github.io/blog/feed.xml"
+      
+    - id: "hacker-news"
+      name: "Hacker News"
+      url: "http://news.ycombinator.com/rss"
+      
+    - id: "guy-kawasaki"
+      name: "Guy Kawasaki"
+      url: "http://guykawasaki.com/feed/"
+      
+    - id: "essays-benedict-evans"
+      name: "Essays - Benedict Evans"
+      url: "http://ben-evans.com/benedictevans?format=rss"
+      
+    - id: "first-round-review"
+      name: "First Round Review"
+      url: "http://firstround.com/review/feed.xml"
+      
+    - id: "sam-altman"
+      name: "Sam Altman"
+      url: "http://blog.samaltman.com/posts.atom"
+      
+    - id: "andrew-chen"
+      name: "Andrew Chen"
+      url: "http://andrewchen.co/feed/"
+      
+    - id: "both-sides-of-the-table-medium"
+      name: "Both Sides of the Table - Medium"
+      url: "https://bothsidesofthetable.com/feed"
+      
+    - id: "both-sides-of-the-table"
+      name: "Both Sides of the Table"
+      url: "http://feeds.feedburner.com/BothSidesOfTheTable"
+      
+    - id: "onstartups"
+      name: "OnStartups"
+      url: "http://feed.onstartups.com/onstartups"
+      
+    - id: "black-box-of-product-management"
+      name: "The Black Box of Product Management - Medium"
+      url: "https://medium.com/feed/the-black-box-of-product-management"
+      
+    - id: "product-life"
+      name: "Product Life"
+      url: "https://productlife.to/feed"
+      
+    - id: "irrational-exuberance"
+      name: "Irrational Exuberance"
+      url: "https://lethain.com/feeds/"
+      
+    - id: "slashgear"
+      name: "SlashGear"
+      url: "http://feeds.slashgear.com/slashgear"
+      
+    - id: "venturebeat"
+      name: "VentureBeat"
+      url: "http://venturebeat.com/feed/"
+      
+    - id: "the-verge"
+      name: "The Verge"
+      url: "http://www.theverge.com/rss/full.xml"
+      
+    - id: "engadget"
+      name: "Engadget"
+      url: "http://www.engadget.com/rss-full.xml"
+      
+    - id: "tech-in-asia"
+      name: "Tech in Asia"
+      url: "https://feeds2.feedburner.com/PennOlson"
+      
+    - id: "techcrunch"
+      name: "TechCrunch"
+      url: "https://techcrunch.com/feed/"
+      
+    - id: "fast-company-design"
+      name: "Fast Company"
+      url: "http://www.fastcodesign.com/rss.xml"
+      
+    - id: "techcrunch-startups"
+      name: "Startups – TechCrunch"
+      url: "https://techcrunch.com/startups/feed/"
+      
+    - id: "forbes-leadership"
+      name: "Forbes - Leadership"
+      url: "https://www.forbes.com/leadership/feed/"
+      
+    - id: "fast-company-headlines"
+      name: "Fast Company"
+      url: "http://feeds.feedburner.com/fastcompany/headlines"
+      
+    - id: "forbes-entrepreneurs"
+      name: "Forbes - Entrepreneurs"
+      url: "http://www.forbes.com/entrepreneurs/index.xml"
+      
+    - id: "product-hunt"
+      name: "Product Hunt — The best new products, every day"
+      url: "http://www.producthunt.com/feed"
+      
+    - id: "hacker-news-show-hn"
+      name: "Hacker News: Show HN"
+      url: "http://hnrss.org/show"
+      
+    - id: "hacker-news-launches"
+      name: "Hacker News: Launches"
+      url: "https://hnrss.org/launches"
+      
+    - id: "sachin-rekhi-blog"
+      name: "Sachin Rekhi's Blog"
+      url: "http://feeds.feedburner.com/sachinrekhiblog"
+      
+    - id: "airtable-engineering"
+      name: "The Airtable Engineering Blog"
+      url: "https://medium.com/feed/airtable-eng"
+      
+    - id: "medium-engineering"
+      name: "Medium Engineering - Medium"
+      url: "https://medium.com/feed/medium-eng"
+      
+    - id: "paypal-technology-blog"
+      name: "The PayPal Technology Blog - Medium"
+      url: "https://medium.com/feed/paypal-engineering"
+      
+    - id: "pinterest-engineering"
+      name: "Pinterest Engineering Blog - Medium"
+      url: "https://medium.com/feed/pinterest-engineering"
+      
+    - id: "grab-tech"
+      name: "Grab Tech"
+      url: "https://engineering.grab.com/feed.xml"
+      
+    - id: "slack-engineering"
+      name: "Slack Engineering"
+      url: "https://slack.engineering/feed"
+      
+    - id: "github-engineering"
+      name: "Engineering – The GitHub Blog"
+      url: "http://githubengineering.com/atom.xml"
+      
+    - id: "atlassian-developer"
+      name: "Atlassian Developer Blog"
+      url: "https://developer.atlassian.com/blog/feed.xml"
+      
+    - id: "facebook-engineering"
+      name: "Facebook Engineering"
+      url: "https://code.facebook.com/posts/rss"
+      
+    - id: "grokking-newsletter"
+      name: "Grokking Newsletter"
+      url: "http://newsletter.grokking.org/?format=rss"
+      
+    - id: "ebay-tech-blog"
+      name: "eBay Tech Blog"
+      url: "http://www.ebaytechblog.com/feed/"
+      
+    - id: "spotify-labs"
+      name: "Spotify Engineering"
+      url: "https://engineering.atspotify.com/feed/"
+      
+    - id: "twitter-engineering"
+      name: "Twitter Engineering"
+      url: "https://blog.twitter.com/engineering/en_us/blog.rss"
+      
+    - id: "stripe-blog"
+      name: "Stripe Blog"
+      url: "https://stripe.com/blog/feed.rss"
+      
+    - id: "instagram-engineering"
+      name: "Instagram Engineering - Medium"
+      url: "https://instagram-engineering.com/feed"
+      
+    - id: "cloudflare-blog"
+      name: "The Cloudflare Blog"
+      url: "https://blog.cloudflare.com/rss/"
+      
+    - id: "asana-engineering"
+      name: "Engineering – The Asana Blog"
+      url: "https://blog.asana.com/category/eng/feed/"
+      
+    - id: "canva-engineering"
+      name: "Canva Engineering Blog - Medium"
+      url: "https://engineering.canva.com/rss"
+      
+    - id: "airbnb-tech-blog"
+      name: "The Airbnb Tech Blog - Medium"
+      url: "https://medium.com/feed/airbnb-engineering"
+      
+    - id: "dropbox-tech"
+      name: "Dropbox Tech"
+      url: "https://dropbox.tech/feed"
+      
+    - id: "wepay-engineering"
+      name: "WePay Engineering Blog"
+      url: "https://wecode.wepay.com/feed.xml"
+      
+    - id: "web-browser-engineering"
+      name: "Web Browser Engineering"
+      url: "https://browser.engineering/rss.xml"
+      
+    - id: "engineering-at-meta"
+      name: "Engineering at Meta"
+      url: "https://engineering.fb.com/feed/"
+      
+    - id: "mind-the-product"
+      name: "Mind the Product"
+      url: "https://www.mindtheproduct.com/feed/"
+      
+    - id: "julia-evans"
+      name: "Julia Evans"
+      url: "https://jvns.ca/atom.xml"
+      
+    - id: "martin-kleppmann"
+      name: "Martin Kleppmann's blog"
+      url: "https://feeds.feedburner.com/martinkl?format=xml"
+      
+    - id: "dan-abramov-overreacted"
+      name: "Dan Abramov's Overreacted Blog RSS Feed"
+      url: "https://overreacted.io/rss.xml"
+      
+    - id: "dan-luu"
+      name: "Dan Luu"
+      url: "https://danluu.com/atom.xml"
+      
+    - id: "shopify-engineering"
+      name: "Shopify Engineering - Shopify Engineering"
+      url: "https://shopifyengineering.myshopify.com/blogs/engineering.atom"
+      
+    - id: "josh-comeau"
+      name: "Josh Comeau's blog"
+      url: "https://joshwcomeau.com/rss.xml"
+      
+    - id: "uber-engineering"
+      name: "Uber Engineering Blog"
+      url: "https://eng.uber.com/feed/"
+      
+    - id: "stripe-cto-blog"
+      name: "Flurries of latent creativity - Stripe CTO blog"
+      url: "https://blog.singleton.io/index.xml"
+      
+    - id: "sophie-alpert"
+      name: "Sophie Alpert"
+      url: "https://sophiebits.com/atom.xml"
+      
+    - id: "amjad-masad"
+      name: "Amjad Masad"
+      url: "https://amasad.me/rss"
+      
+    - id: "signal-blog"
+      name: "Signal Blog"
+      url: "https://signal.org/blog/rss.xml"
+      
+    - id: "joel-on-software"
+      name: "Joel on Software"
+      url: "https://www.joelonsoftware.com/feed/"
+      
+    - id: "pragmatic-engineer"
+      name: "The Pragmatic Engineer"
+      url: "https://blog.pragmaticengineer.com/rss/"
+      
+    - id: "cmu-machine-learning"
+      name: "Machine Learning Blog | ML@CMU | Carnegie Mellon University"
+      url: "https://blog.ml.cmu.edu/feed/"
+      
+    - id: "deepmind"
+      name: "DeepMind"
+      url: "https://deepmind.com/blog/feed/basic/"
+      
+    - id: "jay-alammar"
+      name: "Jay Alammar"
+      url: "https://jalammar.github.io/feed.xml"
+      
+    - id: "distill"
+      name: "Distill"
+      url: "http://distill.pub/rss.xml"
+      
+    - id: "lil-log"
+      name: "Lil’Log"
+      url: "https://lilianweng.github.io/lil-log/feed.xml"
+      
+    - id: "mit-ai-news"
+      name: "MIT News - Artificial intelligence"
+      url: "http://news.mit.edu/rss/topic/artificial-intelligence2"
+      
+    - id: "sebastian-ruder"
+      name: "Sebastian Ruder"
+      url: "http://ruder.io/rss/index.rss"
+      
+    - id: "berkeley-ai-research"
+      name: "The Berkeley Artificial Intelligence Research Blog"
+      url: "http://bair.berkeley.edu/blog/feed.xml"
+      
+    - id: "deeplearningai"
+      name: "DeepLearningAI"
+      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCcIXc5mJsHVYTZR1maL5l9w"
+      
+    - id: "eric-jang"
+      name: "Eric Jang"
+      url: "https://evjang.com/feed"
+      
+    - id: "openai"
+      name: "OpenAI"
+      url: "https://blog.openai.com/rss/"
+      
+    - id: "the-gradient"
+      name: "The Gradient"
+      url: "https://thegradient.pub/rss/"
+      
+    - id: "magenta"
+      name: "Magenta"
+      url: "http://magenta.tensorflow.org/feed.xml"
+      
+    - id: "nlp-news"
+      name: "NLP News"
+      url: "http://newsletter.ruder.io/?format=rss"
+      
+    - id: "google-ai"
+      name: "Google AI Blog"
+      url: "http://googleresearch.blogspot.com/atom.xml"
+      
+    - id: "towards-data-science"
+      name: "Towards Data Science - Medium"
+      url: "https://towardsdatascience.com/feed"
+      
+    - id: "unite-ai"
+      name: "Unite.AI"
+      url: "https://www.unite.ai/feed/"
+      
+    - id: "grammarly-blog"
+      name: "Grammarly Blog"
+      url: "https://www.grammarly.com/blog/feed/"
+      
+    - id: "amazon-science"
+      name: "Amazon Science Homepage"
+      url: "https://www.amazon.science/index.rss"
+      
+    - id: "machine-learning-reddit"
+      name: "Machine Learning"
+      url: "http://www.reddit.com/r/MachineLearning/.rss"
+      
+    - id: "yannic-kilcher"
+      name: "Yannic Kilcher"
+      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew"
+      
+    - id: "two-minute-papers"
+      name: "Two Minute Papers"
+      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCbfYPyITQ-7l4upoX8nvctg"
+      
+    - id: "ux-planet"
+      name: "UX Planet"
+      url: "https://uxplanet.org/feed"
+      
+    - id: "nngroup"
+      name: "NN/g latest articles and announcements"
+      url: "https://www.nngroup.com/feed/rss/"
+      
+    - id: "ux-movement"
+      name: "UX Movement"
+      url: "http://feeds.feedburner.com/uxmovement"
+      
+    - id: "inside-design"
+      name: "Inside Design"
+      url: "http://blog.invisionapp.com/feed/"
+      
+    - id: "uxmatters"
+      name: "UXmatters"
+      url: "https://uxmatters.com/index.xml"
+      
+    - id: "smashing-magazine"
+      name: "Articles on Smashing Magazine — For Web Designers And Developers"
+      url: "https://www.smashingmagazine.com/feed/"
+      
+    - id: "ux-collective"
+      name: "UX Collective - Medium"
+      url: "https://uxdesign.cc/feed"
+      
+    - id: "airbnb-design"
+      name: "Airbnb Design"
+      url: "http://airbnb.design/feed/"
+      
+    - id: "web-dev"
+      name: "web.dev"
+      url: "https://web.dev/feed.xml"
+      
+    - id: "slack-design"
+      name: "Slack Design"
+      url: "https://slack.design/feed/"
+      
+    - id: "css-tricks"
+      name: "CSS-Tricks"
+      url: "https://feeds.feedburner.com/CssTricks"
+      
+    - id: "ux-daily"
+      name: "UX Daily - User Experience Daily"
+      url: "https://interaction-design.org/rss/site_news.xml"
+      
+    - id: "psyblog"
+      name: "PsyBlog"
+      url: "http://feeds.feedburner.com/PsychologyBlog"
+      
+    - id: "all-about-psychology"
+      name: "Psychology Blog"
+      url: "http://www.all-about-psychology.com/psychology.xml"
+      
+    - id: "social-psychology-headlines"
+      name: "Psychology Headlines Around the World"
+      url: "http://www.socialpsychology.org/headlines.rss"
+      
+    - id: "nautilus-all"
+      name: "Nautilus"
+      url: "https://nautil.us/rss/all"
+      
+    - id: "freakonomics"
+      name: "Freakonomics"
+      url: "http://freakonomics.blogs.nytimes.com/feed/"
+      
+    - id: "psychology-today"
+      name: "Psychology Today"
+      url: "https://www.psychologytoday.com/intl/rss.xml"
+      
+    - id: "neuroscience-news"
+      name: "Neuroscience News"
+      url: "http://neurosciencenews.com/feed/"
+      
+    - id: "sciencedaily-neuroscience"
+      name: "Neuroscience News -- ScienceDaily"
+      url: "https://sciencedaily.com/rss/mind_brain/neuroscience.xml"
+      
+    - id: "sharpbrains"
+      name: "SharpBrains"
+      url: "http://www.sharpbrains.com/feed/"
+      
+    - id: "quanta-magazine"
+      name: "Quanta Magazine"
+      url: "http://www.quantamagazine.org/feed/"
+      
+    - id: "nature"
+      name: "Nature"
+      url: "http://www.nature.com/nature/current_issue/rss"
+      
+    - id: "mit-sts-news"
+      name: "MIT News - Science, Technology, and Society"
+      url: "https://news.mit.edu/rss/topic/science-technology-and-society"
+      
+    - id: "mit-research-news"
+      name: "MIT News"
+      url: "https://news.mit.edu/rss/research"
+      
+    - id: "sciencealert"
+      name: "ScienceAlert"
+      url: "https://www.sciencealert.com/rss"
+      
+    - id: "singularity-hub"
+      name: "Singularity Hub"
+      url: "https://singularityhub.com/feed/"
+      
+    - id: "lesics"
+      name: "Lesics"
+      url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCqZQJ4600a9wIfMPbYc60OQ"
+      
+    - id: "moz"
+      name: "Moz"
+      url: "http://feeds.feedburner.com/seomoz"
+      
+    - id: "content-marketing-institute"
+      name: "Content Marketing Institute"
+      url: "http://feeds.feedburner.com/cmi-content-marketing"
+      
+    - id: "neil-patel"
+      name: "Neil Patel"
+      url: "http://feeds.feedburner.com/KISSmetrics"
+      
+    - id: "marketingprofs"
+      name: "MarketingProfs"
+      url: "http://rss.marketingprofs.com/marketingprofs/daily"
+      
+    - id: "marketo-marketing"
+      name: "Marketo Marketing blog"
+      url: "http://feeds.feedburner.com/modernb2bmarketing"
+      
+    - id: "quick-sprout"
+      name: "Quick Sprout"
+      url: "http://www.quicksprout.com/feed/"
+      
+    - id: "social-media-examiner"
+      name: "Social Media Examiner | Social Media Marketing"
+      url: "http://www.socialmediaexaminer.com/feed/"
+      
+    - id: "john-egan"
+      name: "John Egan"
+      url: "http://jwegan.com/feed/rss/"
+      
+    - id: "convince-and-convert"
+      name: "Convince and Convert"
+      url: "http://www.convinceandconvert.com/feed/"
+      
+    - id: "hubspot"
+      name: "Hubspot"
+      url: "http://blog.hubspot.com/CMS/UI/Modules/BizBlogger/rss.aspx?tabid=6307&moduleid=8441&maxcount=25"
+      
+    - id: "seth-godin"
+      name: "Seth Godin's Blog"
+      url: "http://sethgodin.typepad.com/seths_blog/atom.xml"
+      
+    - id: "backlinko"
+      name: "Backlinko"
+      url: "http://backlinko.com/feed"
+
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
@@ -132,7 +882,7 @@ rss:
 #    • 适用场景：避免重复信息干扰
 # ===============================================================
 report:
-  mode: "current"                     # 可选: daily | current | incremental
+  mode: "incremental"                     # 可选: daily | current | incremental
   display_mode: "keyword"             # 分组维度: keyword | platform
                                       # keyword: 按关键词分组显示（默认）
                                       # platform: 按平台/来源分组显示
@@ -178,7 +928,7 @@ display:
     new_items: true                   # 新增热点区域（含热榜新增 + RSS 新增）
                                       # 注：热点词汇统计中的新增标记🆕不受此配置影响
 
-    rss: false                         # RSS 订阅区域
+    rss: true                         # RSS 订阅区域
                                       # 开启后将对 RSS 进行关键词分析并在通知中展示
                                       # 关闭后跳过分析，但独立展示区不受影响
 
@@ -229,10 +979,10 @@ notification:
   #   执行时间不稳定，时间范围建议至少留足 2 小时
   # 💡 想要精准定时？建议使用 Docker 部署在个人服务器上
   push_window:
-    enabled: false                    # 是否启用推送时间窗口控制
-    start: "20:00"                    # 开始时间（北京时间）
-    end: "22:00"                      # 结束时间（北京时间）
-    once_per_day: true                # true=窗口内只推送一次，false=窗口内每次执行都推送
+    enabled: true                    # 是否启用推送时间窗口控制
+    start: "06:00"                    # 开始时间（北京时间）
+    end: "20:00"                      # 结束时间（北京时间）
+    once_per_day: false                # true=窗口内只推送一次，false=窗口内每次执行都推送
 
   # 推送渠道配置
   channels:
@@ -359,7 +1109,7 @@ ai:
   temperature: 1.0                  # 采样温度 (0.0-2.0)
                                     # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
   
-  max_tokens: 5000                  # 最大生成 token 数
+  max_tokens: 0                  # 最大生成 token 数
                                     # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
   # 高级选项
   num_retries: 1                    # 失败重试次数
@@ -424,10 +1174,10 @@ ai_analysis:
   #   - 推送 incremental（避免重复），AI 分析 current（看当前榜单变化）
   #   - 推送 current（实时热点），AI 分析 daily（全天总结）
   #
-  mode: "follow_report"
+  mode: "current"
 
   # 分析内容配置
-  max_news_for_analysis: 60         # 参与分析的新闻数量上限（控制成本关键项）
+  max_news_for_analysis: 1500         # 参与分析的新闻数量上限（控制成本关键项）
                                     # 推送消息顶部会显示实际的 AI 分析数供参考
 
                                     # api 成本估算 (仅供参考)
@@ -438,7 +1188,7 @@ ai_analysis:
                                       # GitHub Action 部署默认推送约 20 次（每小时推送一次）， 约 0.1 元/天
                                       # Docker 部署默认推送 48 次(每半小时推送一次)， 约 0.2 元/天
 
-  include_rss: false                 # 是否包含 RSS 内容进行分析
+  include_rss: true                 # 是否包含 RSS 内容进行分析
 
   include_rank_timeline: true      # 是否传递完整排名时间线
                                     # false: 使用简化格式（排名范围+时间范围+出现次数）
@@ -453,12 +1203,12 @@ ai_analysis:
 # 模型配置见上方 ai 配置段
 # ===============================================================
 ai_translation:
-  enabled: false                    # 是否启用翻译功能
+  enabled: true                    # 是否启用翻译功能
 
   # 翻译目标语言
   # 格式：自然语言描述
   # 示例: "Chinese", "Korean", "法语"
-  language: "English"
+  language: "Chinese"
 
   # 提示词配置文件路径（相对于 config 目录）
   prompt_file: "ai_translation_prompt.txt"
